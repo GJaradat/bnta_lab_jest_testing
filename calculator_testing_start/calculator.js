@@ -2,17 +2,31 @@ const sum = function(a, b){
     return a + b;
 };
 
-const subtract = null;
+const subtract = function(a, b){
+    return a - b;
+};
 
-const multiply = null;
+const multiply = (a, b) => {
+    return a * b;
+};
 
-const divide = null;
+const divide = (a, b) =>{
+    return a / b;
+};
 
-const modulus = null;
+//I'm getting slightly attached to the arrow in the arrow function
 
-const even = null;
+const modulus = (a, b) => {
+    return a % b;
+};
 
-const odd = null;
+const even = (a) => {
+    return a % 2 == 0;
+};
+
+const odd = (a) => {
+    return a % 2 != 0;
+};
 
 module.exports = { 
     sum, 
