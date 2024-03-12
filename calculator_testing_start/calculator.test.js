@@ -115,8 +115,24 @@ describe('modulus', () => {
 
 describe('even', () => {
 
+  test('can check small numbers', () => {
+    expect(even(2)).toBe(true);
+    expect(even(3)).toBe(false);
+  });
+
+  test('can check large numbers', () => {
+    expect(even(810_000_000)).toBe(true);
+    expect(even(9_000_000_001)).toBe(false);
+  });
+
+  test('can check negative numbers', () => {
+    expect(even(-2)).toBe(true);
+    expect(even(-3)).toBe(false);
+  });
 });
 
 describe('odd', () => {
+
+  
 
 });
