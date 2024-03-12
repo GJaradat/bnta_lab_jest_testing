@@ -21,7 +21,8 @@ describe('sum', () => {
     actual = sum(900_000_000, 100_000_000);
     expect(actual).toBe(expected);
   });
-
+  
+  //Sorry but I can't be bothered with the longer writing
   test('can add two negative numbers', () => {
     expect(sum(-2, -3)).toBe(-5);
   });
@@ -34,6 +35,23 @@ describe('sum', () => {
 
 describe('subtract', () => {
 
+  test('can subtract two small positive numbers', () => {
+    expect(subtract(3, 2)).toBe(1);
+  });
+
+  test('can subtract two large positive numbers', () => {
+    expect(subtract(900_000_000, 100_000_000)).toBe(800_000_000);
+  });
+  
+  test('can subtract two negative numbers', () => {
+    expect(subtract(-2, -3)).toBe(1);
+    expect(subtract(-3, -2)).toBe(-1);
+  });
+
+  test('can subtract zero', () => {
+    expect(subtract(2, 0)).toBe(2);
+  });
+  
 });
 
 describe('multiply', () => {
