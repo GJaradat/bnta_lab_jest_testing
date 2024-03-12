@@ -108,7 +108,7 @@ describe('modulus', () => {
   });
 
   test('can modulus negative numbers', () => {
-    expect(modulus(-3, -2)).toBe(1);
+    expect(modulus(-3, -2)).toBe(2);
   });
 
 });
@@ -133,6 +133,19 @@ describe('even', () => {
 
 describe('odd', () => {
 
-  
+  test('can check small numbers', () => {
+    expect(odd(2)).toBe(false);
+    expect(odd(3)).toBe(true);
+  });
+
+  test('can check large numbers', () => {
+    expect(odd(810_000_000)).toBe(false);
+    expect(odd(9_000_000_001)).toBe(true);
+  });
+
+  test('can check negative numbers', () => {
+    expect(odd(-2)).toBe(false);
+    expect(odd(-3)).toBe(true);
+  });
 
 });
