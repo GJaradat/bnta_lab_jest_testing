@@ -64,8 +64,9 @@ describe('multiply', () => {
     expect(multiply(900_000_000, 900_000)).toBe(810_000_000_000_000);
   })
 
-  test('can multiply two negative numbers', () => {
+  test('can multiply negative numbers', () => {
     expect(multiply(-2, -3)).toBe(6);
+    expect(multiply(-3, 2)).toBe(-6);
   });
 
   test('can multiply zero', () => {
@@ -76,6 +77,22 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide two small positive numbers', () => {
+    expect(divide(6, 3)).toBe(2);
+  });
+
+  test('can divide two large positive numbers', () => {
+    expect(divide(900_000_000, 900_000)).toBe(1_000);
+  });
+
+  test('can divide negative numbers', () => {
+    expect(divide(-6, -3)).toBe(2);
+    expect(divide(6, -2)).toBe(-3);
+  });
+  
+  test('can NOT divide by zero', () => {
+    expect(divide(99999, 0)).toBe(Infinity);
+  })
 });
 
 describe('modulus', () => {
