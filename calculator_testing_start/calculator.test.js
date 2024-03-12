@@ -62,7 +62,7 @@ describe('multiply', () => {
 
   test('can multiply two large positive numbers', () => {
     expect(multiply(900_000_000, 900_000)).toBe(810_000_000_000_000);
-  })
+  });
 
   test('can multiply negative numbers', () => {
     expect(multiply(-2, -3)).toBe(6);
@@ -71,7 +71,7 @@ describe('multiply', () => {
 
   test('can multiply zero', () => {
     expect(multiply(0, 99999)).toBe(0);
-  })
+  });
 
 });
 
@@ -92,10 +92,24 @@ describe('divide', () => {
   
   test('can NOT divide by zero', () => {
     expect(divide(99999, 0)).toBe(Infinity);
-  })
+  });
+
 });
 
 describe('modulus', () => {
+
+  test('can modulus two small positive numbers', () => {
+    expect(modulus(6, 3)).toBe(0);
+    expect(modulus(3, 6)).toBe(3);
+  });
+
+  test('can modulus two large positive numbers', () => {
+    expect(modulus(810_000_000, 900_000)).toBe(0);
+  });
+
+  test('can modulus negative numbers', () => {
+    expect(modulus(-3, -2)).toBe(1);
+  });
 
 });
 
