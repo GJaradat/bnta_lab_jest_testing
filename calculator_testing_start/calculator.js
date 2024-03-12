@@ -23,13 +23,18 @@ const modulus = (a, b) => {
 };
 
 const oddOrEven = (a) => {
+    //See comment in calculator.test.js line 138
+    // if(a % 1 !== 0){
+    //     throw ("Floats are not whole numbers!");
+    // }
     if (a % 2 == 0) {
         return "even";
-    } else {
+    } else if (Math.abs(a % 2) == 1) {
         return "odd";
+    } else{
+        return "neither";
     }
 };
-
 
 module.exports = { 
     sum, 

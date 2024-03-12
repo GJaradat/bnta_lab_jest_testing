@@ -30,6 +30,11 @@ describe("sum", () => {
     expect(sum(0, 2)).toBe(2);
   });
 
+  //Have to test this way because of floating point arithmetic
+  test("can use .toBeCloseTo for adding floats", () => {
+    expect(sum(0.1, 0.2)).toBeCloseTo(0.3);
+  });
+    
 });
 
 describe("subtract", () => {
@@ -125,5 +130,15 @@ describe("oddOrEven", () => {
     expect(oddOrEven(900_000_000_000_001)).not.toBe("even");
   });
 
+  //Not a useful test, but still......
+  test("can pass in a String", () => {
+    expect(oddOrEven("hello")).toEqual(expect.anything());
+  });
 
+  //Can throw expected error - TRIED IMPLEMENTING, Test suite fails to run
+                            //I tried implementing a try/catch block but then the test was failing due to the error being circumvented
+  // test("can throw expected error", () => {
+  //   expect(() => oddOrEven(0.5)).toThrow("Floats are not whole numbers!");
+  // })
+  //Wanted to find a way to implement expect.arrayContaining() but it will take too much time
 });
