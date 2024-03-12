@@ -108,7 +108,7 @@ describe('modulus', () => {
   });
 
   test('can modulus negative numbers', () => {
-    expect(modulus(-3, -2)).toBe(2);
+    expect(modulus(-3, -2)).toBe(1);
   });
 
 });

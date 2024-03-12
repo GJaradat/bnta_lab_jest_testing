@@ -17,7 +17,9 @@ const divide = (a, b) =>{
 //I'm getting slightly attached to the arrow in the arrow function
 
 const modulus = (a, b) => {
-    return a % b;
+    
+    //From a maths perspective, remainders are always positive
+    return Math.abs(a % b);
 };
 
 const even = (a) => {
@@ -25,7 +27,7 @@ const even = (a) => {
 };
 
 const odd = (a) => {
-    return a % 2 == 1;
+    return a % 2 != 0;
 };
 
 module.exports = { 
