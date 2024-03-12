@@ -51,10 +51,26 @@ describe('subtract', () => {
   test('can subtract zero', () => {
     expect(subtract(2, 0)).toBe(2);
   });
-  
+
 });
 
 describe('multiply', () => {
+
+  test('can multiply two small positive numbers', () => {
+    expect(multiply(2, 3)).toBe(6);
+  });
+
+  test('can multiply two large positive numbers', () => {
+    expect(multiply(900_000_000, 900_000)).toBe(810_000_000_000_000);
+  })
+
+  test('can multiply two negative numbers', () => {
+    expect(multiply(-2, -3)).toBe(6);
+  });
+
+  test('can multiply zero', () => {
+    expect(multiply(0, 99999)).toBe(0);
+  })
 
 });
 
