@@ -22,13 +22,14 @@ const modulus = (a, b) => {
     return Math.abs(a % b);
 };
 
-const even = (a) => {
-    return a % 2 == 0;
+const oddOrEven = (a) => {
+    if (a % 2 == 0) {
+        return "even";
+    } else {
+        return "odd";
+    }
 };
 
-const odd = (a) => {
-    return a % 2 != 0;
-};
 
 module.exports = { 
     sum, 
@@ -36,6 +37,5 @@ module.exports = {
     multiply, 
     divide, 
     modulus, 
-    even, 
-    odd 
+    oddOrEven 
 };
